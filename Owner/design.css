@@ -1,0 +1,406 @@
+/* ===========================================================
+   FixLink Equipment Owner Portal — Dark Theme
+=========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b1220;
+    color: #cbd5e1;
+    font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: #7ec8ff;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    color: #93a4bd;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+h3 a {
+    color: #f87171;
+    text-decoration: none;
+    background-color: #2a1620;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+h3 a:hover {
+    background-color: #3a1c28;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #1e293b;
+    margin: 18px 0;
+}
+
+/* ---------- Logo / top bar section ---------- */
+
+.logo-section {
+    display: block;
+    padding: 15px 30px;
+    background-color: #111a2e;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.brand span {
+    color: #7ec8ff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-section h1 {
+    color: #7ec8ff;
+    text-align: center;
+    font-family: Outfit;
+}
+
+/* ---------- Two-column page layout (left menu / right content) ---------- */
+
+.layout {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content table {
+    width: 100%;
+}
+
+.content-panel {
+    background-color: #111a2e;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.content-panel iframe {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 480px;
+    border: none;
+    background: transparent;
+}
+
+.content-panel-stack {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@media (max-width: 760px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+/* ---------- fieldset (used for the sidebar menu AND as a content card) ---------- */
+
+fieldset {
+    background-color: #111a2e;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin: 0 0 20px 0;
+    flex: 1 1 auto;
+}
+
+fieldset ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset li {
+    margin: 0;
+}
+
+fieldset a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+fieldset a:hover {
+    background-color: #16213a;
+    border-left: 3px solid #4aa3ff;
+    color: #7ec8ff;
+}
+
+/* ---------- Tables ---------- */
+
+table {
+    background-color: #111a2e;
+    border: 1px solid #1e293b !important;
+    border-radius: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th {
+    background-color: #16213a;
+    color: #93a4bd;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    border: 1px solid #1e293b !important;
+    padding: 12px 10px;
+}
+
+td {
+    border: 1px solid #1e293b !important;
+    padding: 10px;
+    color: #e2e8f0;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: left;
+}
+
+tr:hover td {
+    background-color: #16213a;
+}
+
+td a {
+    color: #4aa3ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+td a:hover {
+    color: #7ec8ff;
+    text-decoration: underline;
+}
+
+/* ---------- ADDED: computed availability badge ---------- */
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-available {
+    background-color: #16352a;
+    color: #4ade80;
+}
+
+.status-rented {
+    background-color: #3a2410;
+    color: #fbbf24;
+}
+
+/* ---------- Forms ---------- */
+
+form table {
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    background-color: #0b1220;
+    border: 1px solid #2a3850;
+    color: #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4aa3ff;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #4aa3ff;
+    color: #0b1220;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #7ec8ff;
+}
+
+/* ---------- ADDED: Income dashboard overview cards ---------- */
+
+.stats-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background-color: #16213a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 18px 22px;
+    flex: 1 1 180px;
+}
+
+.stat-label {
+    color: #93a4bd;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    color: #7ec8ff;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.section-heading {
+    color: #93a4bd;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0 0 16px 0;
+    text-align: left;
+}
+
+.empty-message {
+    color: #64748b;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* ---------- ADDED: simple CSS-only bar chart ---------- */
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    height: 220px;
+    padding: 10px 10px 0 10px;
+    border-bottom: 1px solid #1e293b;
+}
+
+.bar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 60px;
+    height: 100%;
+}
+
+.bar-value {
+    color: #93a4bd;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.bar {
+    width: 100%;
+    max-width: 46px;
+    background-color: #4aa3ff;
+    border-radius: 4px 4px 0 0;
+    min-height: 2px;
+    transition: height 0.3s ease;
+}
+
+.bar-label {
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+p[align="center"] {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* ---------- ADDED: live search box (My Equipment) ---------- */
+
+.search-bar {
+    margin: 0 0 16px 0;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    background-color: #0b1220;
+    border: 1px solid #2a3850;
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.search-bar input[type="text"]:focus {
+    outline: none;
+    border-color: #4aa3ff;
+}
